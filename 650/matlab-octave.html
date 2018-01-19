@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>Getting Matlab/Octave</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style type="text/css">
+			body {
+				width: 60em;
+				margin-top: 1em;
+				margin-left: auto;
+			    margin-right: auto;
+			}
+			p {text-align: center;}
+			h1 {text-align: center;}
+			h2 {text-align: center;}
+			h3 {text-align: center;}
+			.small {
+				font-size: small;
+				font-weight: bold;
+			}
+			.left {text-align: left;}
+		</style>
+	</head>
+	<body>
+		<a id="top"></a>
+		<h2>You will need access to either <a href="http://www.mathworks.com/index.html" target="_blank">Matlab</a> or <a href="https://www.gnu.org/software/octave/"target="_blank">Octave</a> for CMPSCI 650</h2>
+		<h3>Both Matlab and Octave are supported on Windows, Mac and Linux</h3>
+		<p class="small">Last updated: September 4, 2014</p>
+		<br />
+		<p style="font-weight: bold">
+			- Use Matlab through your lab (check with your lab for more information)
+		</p>
+		<p style="font-weight: bold">
+			- <a href="#buymatlab">Buy a copy of Matlab for students ($99)</a>
+		</p>
+		<p style="font-weight: bold">
+			- <a href="#edlab">Use Matlab remotely on the Edlab computers (free, but using the GUI can be very slow)</a>
+		</p>
+		<p style="font-weight: bold">
+			- <a href="#octave">Download, install, and use Octave (free, open-source clone of Matlab)</a>
+		</p>
+		<br />
+		<p>
+			For those planning on using Octave, <a href="http://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octave_and_MATLAB" target="_blank">this page</a> may be a helpful resource on the differences between Octave and Matlab.
+		</p>
+		<br />
+
+		<a id="buymatlab"><h3>Buying a copy of Matlab (student license) - $99</h3></a>
+		<p>
+			<ol>
+				<li>You will need to create an account (unless you have already in the past) using your @umass.edu email address to qualify for the $99 student license. Go to the <a href="https://www.mathworks.com/accesslogin/createProfile.do?uri=https://www.mathworks.com/store/link/products/student" target="_blank">Mathworks website</a> to create an account (make sure to choose "Student use of MATLAB® and Simulink® Student Version").</li>
+				<li>Once you've created an account and logged in, go to <a href="https://www.mathworks.com/store/link/products/student" target="_blank">https://www.mathworks.com/store/link/products/student</a> and choose the core product "MATLAB & Simulink Student Version".</li>
+				<li>Go ahead and checkout and follow the instructions for your OS to install your new copy of Matlab.</li>
+			</ol>
+		</p>
+		<br />
+		<a id="edlab"><h3>Using Matlab remotely on the Edlab computers (slow if using a GUI)</h3></a>
+		<p class="left">
+			You may use the copy of Matlab available on the Edlab computers by logging in as explained on the <a href="http://www-edlab.cs.umass.edu/">Edlab</a> website under "Remote access to Edlab hosts". Make sure to use one of the linux machines. There is a possibility that Matlab is not available when logged into elnux3. You may also be able to access Matlab by using one of the machines in the USpace (again, make sure the machine is booted into Ubuntu Linux). This may make it possible to also use the Matlab GUI without a significant network lag. When accessing the Edlab computers remotely via SSH, the Matlab GUI will only be available if you have set up X-forwarding on your SSH client. If you need help doing this, please come to office hours. Matlab can be used without a GUI, however you will not be able to display images while working in Matlab and will need to instead save them in some way to view on your local machine.
+		</p>
+		<p class="left">
+			In both cases (accessing the Edlab machines remotely or using a USpace machine), once you've logged in you should be able to start Matlab by executing the following command:
+		</p>
+		<p style="font-family: monospace;">/exp/comm/matlab/bin/matlab</p>
+		<p class="left">
+			To launch Matlab without a GUI, you can use the following:
+		</p>
+		<p style="font-family: monospace;">/exp/comm/matlab/bin/matlab -nodisplay</p>
+		<p class="left">
+			To launch Matlab without a GUI or JVM (not recommended by Mathworks, but this may make it faster. It may, however, also prevent certain commands that use Java from functioning), you can use the following:
+		</p>
+		<p style="font-family: monospace;">/exp/comm/matlab/bin/matlab -nodisplay -nojvm</p>
+		<br />
+		<a id="octave"><h3>Getting Octave</h3></a>
+		<p>
+			<a href="http://en.wikibooks.org/wiki/MATLAB_Programming/Differences_between_Octave_and_MATLAB" target="_blank">Some differences between Octave and Matlab</a>
+		</p>
+		<p class="left">
+			Octave is a free, open-source clone of Matlab. This means that it may or may not have been optimized the same way as Matlab (i.e. it may not be as fast for certain operations), and some commands may not take exactly the same arguments. Also, only the most recent version of Octave includes a (beta) GUI. Unfortunately, the newest installers for Octave in Windows is not this most recent version (version 3.8 at the time of this writing), so if you absolutely want the GUI, you will have to compile Octave yourself (not recommended). Using Octave without the GUI will NOT prevent you from being able to view images, however you will not have the user interface for navigating folders, viewing workspace variables, and a built-in editor like Matlab.
+		</p>
+		<p class="left">
+			For <b>Windows</b>, you may either install the package available in <a href="http://cygwin.com/packages" target="_blank">Cygwin</a>, or use an installer. More information about the installers are available <a href="http://wiki.octave.org/Octave_for_Windows" target="_blank">here</a>. <a href="http://sourceforge.net/projects/octave/files/Octave%20Windows%20binaries/Octave%203.6.4%20for%20Windows%20Microsoft%20Visual%20Studio/octave-3.6.4-vs2010-setup.exe/download" target="_blank">This</a> installer may suffice.
+		</p>
+		<p class="left">
+			For <b>Mac OS X</b>, go to <a href="http://wiki.octave.org/Octave_for_MacOS_X" target="_blank">http://wiki.octave.org/Octave_for_MacOS_X</a> to read more on how to install Octave for Mac. If you already have a package manager like Fink, MacPorts, or Homebrew, there should be packages for Octave available (see the previous link for details). Otherwise, use the <a href="http://wiki.octave.org/Octave_for_MacOS_X#Binary_installer_for_OSX_10.9.1" target="_blank">binary installer</a> linked on the page for a relatively straightforward installation process.
+		</p>
+		<p>
+			<b>NOTE: If you use the binary installer on OS X 10.9+, you will need to right-click on the installer mpkg in the dmg download and click "open" to allow the installer to run. There is more information on the wiki as well as in the readme included in the dmg download.</b>
+		</p>
+		<p class="left">
+			For <b>Linux</b>, check your package manager for a copy of Octave. This should be just like installing any other software from your package manager.
+		</p>
+		<br />
+		<p><a href="#top" style="text-decoration: none;">[top]</a></p>
+		<br />
+		<br />
+	</body>
+</html>
